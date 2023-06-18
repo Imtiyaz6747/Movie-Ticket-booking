@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #191825;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  margin-top: -100px;
+}
+
+
+.main {
+  height: auto;
+  width: 100%;
+  margin-top: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+/* Responsive styles for sub1 and sub2 sections */
+.sub1{
+  height: 50%;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-right: -20px;
+  margin-bottom: 20px;
+
+}
+.sub2 {
+  height: 50%;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 12px;
+}
+
+
+/* Wellcome to bookshow */
+h1 {
+  color: #fff;
+  font-size: 35px;
+  margin-top: 1px;
+}
+h1 span {
+  color: #35ec78;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+h2 i {
+  margin-right: 10px;
+}
+h2 i:hover {
+  animation-play-state: paused;
+}
+h2 span {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+h2 span:hover {
+  transform: rotate(360deg);
+}
+
+
+/* Select a movie */
+.movie-container {
+  margin: 40px 0 20px 0;
+}
+
+.movie-container select {
+  background-color: #ffffffef;
+  border: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 8px;
+  padding: 8px 15px 8px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.movie-container select:hover {
+  background-color: #fff;
+}
+
+
+/* Select a city */
+.city-container select {
+  background-color: #ffffffef;
+  border: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 8px;
+  margin-bottom: 28px;
+  padding: 8px 135px 8px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.city-container select:hover {
+  background-color: #fff;
+  
+}
+
+
+/* Select a date and Time */
+.datetime-container label {
+  padding-left: 15px;
+}
+
+.datetime-container select {
+  display:inline;
+  justify-content:space-between ;
+  background-color: #ffffffef;
+  border: 0;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-left: 8px;
+  margin-bottom: 28px;
+  padding: 8px 15px 8px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+} 
+
+.datetime-container select:hover {
+  background-color: #fff;
+}
+
+
+/* Screen and seats */
+.container {
+  perspective: 1000px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 20px;
+  max-height: 22px;
+  width: 20px;
+  max-width: 23px;
+  margin: 7px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.row {
+  padding-top: 5px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+}
+
+.seat:nth-of-type(3) {
+  margin-right: 18px;
+}
+
+.seat:nth-last-of-type(3) {
+  margin-left: 18px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  background-color: rgb(136, 108, 214);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(198, 198, 198, 0.1);
+  padding: auto;
+  border-radius: 5px;
+  color: #dfdfdf;
+  list-style-type: none;
+  display: flex;
+  justify-content:space-evenly;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.showcase li small {
+  margin-left: 2px;
+}
+
+.row {
+  display: flex;
+}
+
+.screen {
+  background-color: #fffffff5;
+  color: #070707;
+  text-align: center;
+  height: 20px;
+  width: 50%;
+  margin: 22px 110px 25px 110px;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.539);
+  border-top-right-radius: 67px;
+  border-top-left-radius: 67px;
+}
+
+p.text {
+  margin: 50px 25px 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
+
+#button {
+  background-color: #fff;
+  height: 40px;
+  width: 90px;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+#button:hover{
+  background-color: #4ec379;
+  color:#fff;
+}
+
+#confirmation-msg{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: auto;
+  max-height: max-content;
+  width: auto;
+  max-width: 400px;
+  font-size: 13px;
+  text-align:initial;
+  color: #070707;
+  border-radius: 10px;
+  padding: 25px;
+  background-color: #fffefe;
+  box-shadow: #dfdfdf;
+}
+em {
+  font-size: 20px;
+  background-color: rgb(242, 242, 242);
+  padding: 5px 23px ;
+  border-radius: 5px;
+  margin-top: 100px;
+}
